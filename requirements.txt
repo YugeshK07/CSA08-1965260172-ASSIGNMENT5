@@ -1,0 +1,2 @@
+# Core programs use the Python standard library only.
+# Optional plotting extension: matplotlib

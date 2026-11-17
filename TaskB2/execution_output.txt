@@ -1,0 +1,26 @@
+bad_encoding.csv: accepted=0, errors=[(0, "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x96 in position 24: invalid start byte")]
+empty.csv: accepted=0, errors=[(0, 'missing required CSV columns')]
+missing_column.csv: accepted=0, errors=[(0, 'missing required CSV columns')]
+valid.csv: accepted=1, errors=[]
+wrong_delimiter.csv: accepted=0, errors=[(0, 'missing required CSV columns')]
+Adyar average: 54.0
+Guindy average: 108.0
+Injection attempt: None
+Sentiment stress tests:
+0 | Great, another smoky day. (sarcasm)
+1 | The service is not bad.
+0 | The air is clean but the response was slow.
+-1 | The staff were not helpful.
+-1 | The report is never good.
+
+ERROR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
